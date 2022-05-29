@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'pry-byebug'
 lines = File.readlines('dict.txt')
 
@@ -42,7 +44,7 @@ def game_over?(word, board_slots)
   exit
 end
 
-p word = random_word(lines).chomp # remove print when game finished
+p word = FileHandler.random_word
 NUM_OF_GUESSES = word.length
 current_guess = 0
 board_slots = Array.new(word.length, '_ ')
